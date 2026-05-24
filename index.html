@@ -209,13 +209,14 @@
     .hero-scan svg { width: 100%; max-width: 480px; height: auto; }
     .hero-scan-text {
       font-family: var(--fd);
-      font-size: clamp(24px, 3vw, 42px);
-      font-weight: 900; text-transform: uppercase;
-      letter-spacing: .08em; line-height: 1.05;
+      font-size: clamp(14px, 1.6vw, 22px);
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: .22em; line-height: 1;
+      white-space: nowrap;
       color: transparent;
-      -webkit-text-stroke: 1.2px var(--yellow);
+      -webkit-text-stroke: 1px var(--yellow);
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
     .spin-slow { animation: spin 28s linear infinite; transform-box: fill-box; transform-origin: center; }
     .spin-rev  { animation: spin 18s linear infinite reverse; transform-box: fill-box; transform-origin: center; }
@@ -577,7 +578,7 @@
 
       <!-- Scan visual — statement sits above SVG -->
       <div class="hero-scan r d1">
-        <div class="hero-scan-text r d2">Avaliação<br>Biomecânica</div>
+        <div class="hero-scan-text r d2">Avaliação Biomecânica</div>
         <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="rg" cx="50%" cy="50%" r="50%">
