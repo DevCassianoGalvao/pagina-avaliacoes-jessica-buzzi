@@ -549,6 +549,19 @@
     /* ═══════ SECTION — AVALIAÇÃO POSTURAL ═══════ */
     .postural { background: var(--g1); }
 
+    .post-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 400px) 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 64px;
+    }
+    @media(max-width:1100px){ .post-layout { grid-template-columns: minmax(0, 320px) 1fr; gap: 56px; } }
+    @media(max-width:900px){
+      .post-layout { grid-template-columns: 1fr; gap: 24px; }
+      .post-layout .ybar { display: none; }
+    }
+
     .post-intro {
       font-family: var(--fb); font-size: 17px; line-height: 1.85;
       color: var(--w60); font-weight: 300;
@@ -680,25 +693,20 @@
 <div class="div-line"></div>
 <section class="postural sec" data-screen-label="Avaliação Postural">
   <div class="wrap">
-    <div class="sec-hdr">
+    <div class="post-layout">
+
+      <!-- Left: título + badge -->
       <div>
         <div class="sec-label r">Postural</div>
         <h2 class="sec-heading r d1">Avaliação<br><span class="out">Postural</span></h2>
-      </div>
-    </div>
-
-    <div class="intro-layout" style="margin-bottom:64px;">
-
-      <!-- Left -->
-      <div>
-        <div class="live-badge r d1">
+        <div class="ybar r d2" style="margin: 24px 0 28px;"></div>
+        <div class="live-badge r d3">
           <div class="live-dot"></div>
           <span style="line-height:1.55">Protocolo de Análise Postural</span>
         </div>
-        <div class="ybar r d2" style="margin-top:24px;"></div>
       </div>
 
-      <!-- Right -->
+      <!-- Right: instruções -->
       <div>
         <div class="post-intro r d2">
           <p><strong>Instruções gerais para as fotos:</strong></p>
