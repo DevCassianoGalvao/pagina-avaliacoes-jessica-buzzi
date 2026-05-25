@@ -551,14 +551,21 @@
 
     .post-layout {
       display: grid;
-      grid-template-columns: minmax(0, 400px) 1fr;
-      gap: 80px;
+      grid-template-columns: minmax(0, 420px) 1fr;
+      gap: 72px;
       align-items: start;
       margin-bottom: 64px;
     }
-    @media(max-width:1100px){ .post-layout { grid-template-columns: minmax(0, 320px) 1fr; gap: 56px; } }
+    .post-layout > div:first-child {
+      min-width: 0; overflow: hidden;
+    }
+    .post-layout .sec-heading {
+      font-size: clamp(32px, 3.8vw, 62px);
+      word-break: break-word;
+    }
+    @media(max-width:1100px){ .post-layout { grid-template-columns: minmax(0, 340px) 1fr; gap: 52px; } }
     @media(max-width:900px){
-      .post-layout { grid-template-columns: 1fr; gap: 24px; }
+      .post-layout { grid-template-columns: 1fr; gap: 40px; }
       .post-layout .ybar { display: none; }
     }
 
