@@ -206,7 +206,7 @@
     .hero-scan {
       display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: .88;
     }
-    .hero-scan svg { width: 100%; max-width: 480px; height: auto; }
+    .hero-scan svg { width: 100%; max-width: 360px; height: auto; }
     .hero-scan-text {
       font-family: var(--fd);
       font-size: clamp(14px, 1.6vw, 22px);
@@ -481,23 +481,22 @@
     @media(max-width:1024px){
       .hero-layout {
         text-align: center;
-        padding: 120px 0 100px;
+        padding: 100px 0 80px;
       }
-      .hero-eyebrow {
-        justify-content: center;
+      /* reorder: logo first, eyebrow below */
+      .hero-layout > div:first-child {
+        display: flex; flex-direction: column; align-items: center;
       }
+      .hero-logo-wrap { order: 1; }
+      .hero-eyebrow   { order: 2; margin-bottom: 0; margin-top: 18px; justify-content: center; }
+      .hero-sep       { order: 3; }
       .hero-eyebrow::before { display: none; }
-      .hero-logo-wrap {
-        display: block; text-align: center;
-      }
       .hero-logo-wrap img {
-        max-width: 280px; margin: 0 auto;
+        max-width: 260px; margin: 0 auto;
       }
-      .hero-statement {
-        text-align: center;
-      }
+      .hero-statement { text-align: center; }
       .hero-sep {
-        margin: 0 auto;
+        margin: 16px auto 0;
         background: linear-gradient(90deg, transparent, var(--yellow), transparent);
       }
     }
